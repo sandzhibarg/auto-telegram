@@ -13,7 +13,8 @@ bot = TeleBot(
 chat_id = os.getenv('CHANNEL_ID')
 
 if __name__ == '__main__':
-    bot.send_message(
+    bot.send_photo(
         chat_id=chat_id,
-        text=f'Test from {formatting.hbold('python')}'
+        photo=open("D:\Downloads\photo1.jpg", 'rb'),
+        caption=f'{formatting.hbold('Awesome photo')}'
     )
